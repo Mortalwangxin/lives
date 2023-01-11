@@ -20,7 +20,7 @@ php版本>7.0
 
 #### 特技
 
-1.  使用手册 忘心留言箱使用手册[忘心留言箱使用手册](https://www.wxword.cn/archives/330.html)
+1.  使用手册 忘心留言箱使用手册[https://www.wxword.cn/archives/330.html](https://www.wxword.cn/archives/330.html)
 2.  GitHub项目地址 [https://github.com/Mortalwangxin/lives](https://github.com/Mortalwangxin/lives)
 3.  Gitee项目地址 [https://gitee.com/wangxinqq/forgetting-message-box](https://gitee.com/wangxinqq/forgetting-message-box)
 4. 作者blog 忘心博客[https://www.wxword.cn/](https://www.wxword.cn/)
