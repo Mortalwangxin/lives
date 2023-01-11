@@ -5,8 +5,8 @@
 忘心留言箱是针对于想要给别人留言或是想给以后的自己留言打造的一款程序，留言时设置密码，用密码来查询留言，保护隐私。
 忘心留言箱配搭后台管理
 
-![页面截图](https://gitee.com/wangxinqq/forgetting-message-box/raw/master/YR%5DCT%5B%5B4R%7BJTKM~%5DAQMBU%7B9.png)
-![页面截图](https://gitee.com/wangxinqq/forgetting-message-box/raw/master/Z%60ACMDWNFW7INNHGZ8K%254NH.png)
+![页面截图](https://gitee.com/wangxinqq/forgetting-message-box/raw/master/项目截图1.png)
+![页面截图](https://gitee.com/wangxinqq/forgetting-message-box/raw/master/项目截图2.png)
 
 #### 安装教程
 导入数据库wxlyq.sql文件
