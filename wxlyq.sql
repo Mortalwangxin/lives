@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2023-01-11 15:45:10
+-- 生成日期： 2023-01-13 21:56:42
 -- 服务器版本： 5.7.40-log
 -- PHP 版本： 7.2.33
 
@@ -42,7 +42,7 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`id`, `title`, `logo`, `icp`, `copyright`, `description`, `keywords`) VALUES
-(1, '忘心留言箱', 'images/logo.png', '备案号', 'Copyright © 忘心博客2020-2022', '忘心留言箱', '忘心博客,忘心,忘心个人主页,源码博客,源码大全,免费源码');
+(1, '忘心留言箱', 'images/logo.png', '备案号', 'by.忘心博客', '忘心留言箱', '忘心留言箱');
 
 -- --------------------------------------------------------
 
@@ -63,11 +63,26 @@ CREATE TABLE `fanall` (
 
 INSERT INTO `fanall` (`id`, `name`, `text`, `time`) VALUES
 (1, '7654', '8765', '2023-01-10'),
-(2, '测试', '测试', '2023-01-10'),
-(3, 'cs', 'cs', '2023-01-10 21:53:13'),
-(4, '测试', '测试', '2023-01-10 21:53:40'),
-(5, '好的就到家', '哈哈哈哈', '2023-01-11 10:46:05'),
-(6, '反馈', '1', '2023-01-11 12:07:25');
+(2, '测试', '测试', '2023-01-10');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `lyset`
+--
+
+CREATE TABLE `lyset` (
+  `id` int(11) NOT NULL,
+  `lanjie` varchar(500) NOT NULL COMMENT '违禁符号',
+  `lanjiezf` varchar(500) NOT NULL COMMENT '违禁词'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 转存表中的数据 `lyset`
+--
+
+INSERT INTO `lyset` (`id`, `lanjie`, `lanjiezf`) VALUES
+(1, '<img ><a><span><script>', '装逼草泥马特么的撕逼玛拉戈壁爆菊JB呆逼本屌齐B短裙法克鱿丢你老母达菲鸡装13逼格蛋疼傻逼绿茶婊你妈的表砸屌爆了买了个婊已撸吉跋猫妈蛋逗比我靠碧莲碧池然并卵日了狗屁民吃翔狗淫家你妹浮尸国滚粗');
 
 -- --------------------------------------------------------
 
@@ -87,7 +102,7 @@ CREATE TABLE `wx_admin` (
 --
 
 INSERT INTO `wx_admin` (`id`, `adminname`, `adminpass`, `adminqq`) VALUES
-(1, 'admin', '123456', '951961505');
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '951961505');
 
 --
 -- 转储表的索引
@@ -113,7 +128,7 @@ ALTER TABLE `wx_admin`
 -- 使用表AUTO_INCREMENT `fanall`
 --
 ALTER TABLE `fanall`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

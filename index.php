@@ -38,22 +38,18 @@
     <div id="search_button">
         <div id="pic"><img src="<?php echo $config['logo'] ?>"></div>
     </div>
-    <div id="info_top">
-        <form action="fk.php" method="post" name="go">
-                    <input type="text" name="name" placeholder="输入暗号"   style="background-color:#FFFFFF; border:0px; height:30px; font-size:18px; width:80%" />
+    <div id="info_comment">
+        <form action="fk.php" method="post" onsubmit="return check()">
+                    <input type="text" name="name" placeholder="输入暗号"   id="name" />
                     <font color="red">
         <div class="infos">把你的想说的小秘密存在信箱里吧～</div> </font>
-                    <hr>   
-    </div>
-    
-        <div style="padding:20px;border:1px solid #96c2f1;background:#ffc7c6">
-            <textarea name="text" placeholder="你想要留言的内容"   style="background-color:#FFFFFF; border:0px; height:120px; font-size:18px; width:100%" /></textarea>
+   <br>
+            <textarea name="text" placeholder="你想要留言的内容"   id="comment" /></textarea>
               <span onmouseover="" style="font-size:8px;color:red">(暗号尽量别用姓名容易重名！！，不然加上地区也可以，例如山东-小明！！）</span>
-
-                <br> 
+          </div>
+          <div id="info_comment">
                 <center>
-                    <hr>
-                    <input type="submit" name="go" class="css_btn_class" value="提交留言">
+                    <input type="submit" class="css_btn_class" value="提交留言">
                     <br>
                     <br>
                     </form>
@@ -62,12 +58,37 @@
                   <a class="css_btn_class" href="/cha.php">查看留言</a>
                   </center>
                     <br>
-                    </form>
                     </div>
                     <?php include_once 'footer.php'; ?>
                     </div>
             
     </div>
+<script>
+    function check() {
+        //获取name数组中的第0个索引 并且去掉空格
+        let text = document.getElementsByName('text')[0].value.trim();
+        let filter = new RegExp("[<?php echo $setinfo['lanjie']?>]");
+        let weifan = new RegExp("[<?php echo $setinfo['lanjiezf']?>]");
+        if (filter.test(text)) {
+            alert("您的内容包含特殊字符 防止xss注入 本次提交已拦截")
+            return false;
+        } else if (weifan.test(text)) {
+            alert("您输入的内容是违禁词 请注意您的发言")
+            return false;
+        }
+        let name = document.getElementsByName("name")[0].value.trim();
+        let nameweijin = new RegExp("[<?php echo $setinfo['lanjie']?>]");
+        let namefilter = new RegExp("[<?php echo $setinfo['lanjiezf']?>]");
+        if (nameweijin.test(name)) {
+            alert("您的昵称包含特殊字符 防止xss注入 本次提交已拦截")
+            return false;
+        }else if (namefilter.test(name)) {
+            alert("您输入的昵称是违禁词 请注意您的发言")
+            return false;
+        }
+        e
 
+    }
+</script>
     </body>
 </html>

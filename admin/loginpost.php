@@ -2,7 +2,7 @@
 session_start();
 
 $adminname = trim($_POST['name']);
-$adminpass = trim($_POST['pass']);
+$adminpass = trim(md5($_POST['pass']));
 include_once "common.php";
 $sql = "select * from wx_admin where adminname = '$adminname' and adminpass = '$adminpass' ";
 $result = mysqli_query($connect, $sql);

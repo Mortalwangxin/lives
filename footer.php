@@ -5,7 +5,7 @@ include_once 'admin/common.php';
 <html lang="zh-CN">
 <body>
     <link rel="stylesheet" href="../css/mian.css">
-<div style="padding:20px;border:1px solid #96c2f1;background:#ffc7c6">
+<div id="zm_gll">
         <center>
         <div class="footer"> <img src="/images/filing.png" alt="备案ico"> <a href="http://beian.miit.gov.cn/"><?php echo $config['icp'] ?></a> 
         </center>

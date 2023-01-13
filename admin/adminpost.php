@@ -1,4 +1,22 @@
 <?php
+//开启会话
+session_start();
+$adminname = trim($_POST['adminname']);
+?>
+<?php
+include_once 'common.php';
+$sql = "select * from wx_admin where adminname = '" . $_SESSION['adminname'] . " ' ";
+$result = mysqli_query($connect, $sql);
+if (mysqli_num_rows($result)) {
+    $text = mysqli_fetch_array($result);
+} else {
+    header("Location:login.php");
+    die("参数错误");
+}
+
+?>
+
+<?php
 include_once 'common.php';
 session_start();
 $icp = trim($_POST['icp']);
@@ -14,4 +32,4 @@ $sql = "Update config set title = '$title', logo = '$logo', icp = '$icp', copyri
     } else {
         echo "<script>alert('更新失败');history.back();</script>";
     }
-
+?>

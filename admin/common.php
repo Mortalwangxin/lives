@@ -30,5 +30,14 @@ $xzlj = 'https://www.wxword.cn/wxlyq/xzlj.php';
 $xxlj = "SELECT * FROM wx_admin";
 $resxx = mysqli_query($connect, $xxlj);
 $admin = mysqli_fetch_array($resxx);
+
+$lyset = "select * from lyset order by id desc";
+$set = mysqli_query($connect, $lyset);
+$setinfo = mysqli_fetch_array($set);
+
+$dian = "select count(id) as dian from fanall";
+$resdian = mysqli_query($connect, $dian);
+$didi = mysqli_fetch_array($resdian);
+$diannub = $didi['dian'];
 ?>
 

@@ -34,7 +34,7 @@ if (mysqli_num_rows($result)) {
 <body>
 <?php include_once 'header.php';
 ?> 
-      <!--页面主要内容-->
+<!--页面主要内容-->
     <main class="lyear-layout-content">
       
       <div class="container-fluid">
@@ -44,20 +44,20 @@ if (mysqli_num_rows($result)) {
             <div class="card">
               <div class="card-body">
                 
-                <form method="post" action="passpost.php" class="site-form">
+                  
+                <hr>
+                <form method="post" action="lysetpost.php" class="site-form">
+                 
                   <div class="form-group">
-                    <label for="old-password">旧密码</label>
-                    <input type="password" class="form-control" name="oldpwd" id="old-password" value="<?php echo $admin['adminpass'] ?>" placeholder="账号的原登录密码">
+                    <label for="nickname">拦截违禁词——无需分隔</label>
+                    <textarea class="form-control" name="lanjiezf" id="lanjiezf" rows="5"  value="" placeholder="请输入要拦截的词，无需分隔"><?php echo $setinfo['lanjiezf'] ?></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="new-password">新密码</label>
-                    <input type="password" class="form-control" name="newpwd" id="new-password" placeholder="输入新的密码">
+                    <label for="qq">拦截非法标签 ——无需分隔</label>
+                    <textarea type="qq" class="form-control" name="lanjie" id="lanjie" rows="5" aria-describedby="emailHelp"  placeholder="请输入要拦截的字符，无需分隔" value=""><?php echo $setinfo['lanjie'] ?></textarea>
+                    
                   </div>
-                  <div class="form-group">
-                    <label for="confirm-password">确认新密码</label>
-                    <input type="password" class="form-control" name="confirmpwd" id="confirm-password" placeholder="请确认无误">
-                  </div>
-                  <button type="submit" class="btn btn-primary">修改密码</button>
+                  <button type="submit" class="btn btn-primary">保存</button>
                 </form>
        
               </div>
@@ -72,6 +72,7 @@ if (mysqli_num_rows($result)) {
     <!--End 页面主要内容-->
   </div>
 </div>
- 
+
+
 </body>
 </html>

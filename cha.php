@@ -39,12 +39,11 @@
                     <img src="<?php echo $config['logo'] ?>">
                 </div>
             </div>
-            <br>
-            <br>
-            <div style="padding:60px;border:1px solid #96c2f1;background:#ffc7c6">
+                        <div id="info_comment">
                 <form action="cha.php" method="post" name="tijiao">
-                    <input type="text" name="name" placeholder="请输入姓名或者暗号查看留言"   style="background-color:transparent; border:0px; height:30px; font-size:18px; width:100%" />
+                    <input type="text" name="name" placeholder="请输入暗号查看留言"   style="background-color:transparent; border:0px; height:30px; font-size:18px; width:100%" />
                     <center>
+                        <br>
                         <hr>
                         <input type="submit" name="go" class="css_btn_class" value="查询留言">
                         <br>
@@ -58,6 +57,7 @@
                 </center>
                 </div>
     </body>
+    <div id="info_comment"
     <center>------------------留言记录------------------</center>
     <?php if($_POST[ "go"]){ include_once( "admin/common.php"); $sqlcx="select * from fanall where name='" .$_POST[ "name"]. "'"; $sqlcxgo=mysqli_query($connect,$sqlcx); if($sqlcxgo>0){ while($myrow=mysqli_fetch_array($sqlcxgo)){ echo '
     <div style="padding:20px;border:1px solid #BEBEBE;background:#ffc7c6">'; echo "时间:".$myrow['time']."
@@ -65,6 +65,7 @@
         <hr>"; $atte = $myrow['text']; echo htmlentities($atte,ENT_QUOTES,"UTF-8"); echo "</div>
     </p>"; } }else{ echo "未查询到留言"; } } ?>
     <br><br>
+    </div>
     <?php include_once 'footer.php'; ?>
 
 </html>

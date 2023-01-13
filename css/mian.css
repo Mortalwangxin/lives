@@ -36,7 +36,7 @@ a {
 .box {
     width: 400px;
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 30px;
     position: absolute;
     top: 50% !important;
     left: 50% !important;
@@ -52,7 +52,7 @@ a {
     text-align: center;
     margin: 0 auto;
     border-radius: 50%;
-    margin-bottom: -70px;
+    margin-bottom: 0px;
 }
 
 #pic img {
@@ -64,16 +64,35 @@ a {
     box-shadow: 0 1px 10px 0 rgba(44, 42, 54, .3);
 }
 
-#info_top {
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 30px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: #ffc7c7;
-    color: #fff;
-    font-size: 13px;
-    line-height: 25px;
+#name{
+  background-color:#FFFAFA; 
+  height:30px; 
+  font-size:18px; 
+  width:80%
+}
+#comment{
+  background-color:#FFFAFA;  
+  height:120px; 
+  font-size:18px; 
+  width:100%
+  
+}
+#info_comment{
+  padding:20px;
+  border-radius: 1rem;
+  text-align: center;
+  border:5px solid #FFFAFA;
+  background:#ffc7c6
+}
+
+#zm_gll {
+    color: #eeeeee;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 15px 15px 15px 35px;
+    /*border-radius: 10px;*/
+    box-shadow: 6px 0 12px -5px rgb(68, 110, 92), -6px 0 12px -5px rgb(204, 212, 163);
+    background-image: linear-gradient( 102deg, rgba(68,110,92,1) 17.4%, rgba(107,156,120,1) 49.3%, rgba(154,183,130,1) 83.4%, rgba(247,237,191,1) 110.3% );
 }
 
 @media only screen and (max-width: 60em) {
