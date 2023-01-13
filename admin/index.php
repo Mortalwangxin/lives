@@ -113,7 +113,7 @@ if (mysqli_num_rows($result)) {
                       </tr>
                       <tr>
                         <td>程序版本：</td>
-                        <td>1.0</td>
+                        <td>1.1</td>
                        
                         </td>
                       </tr>
