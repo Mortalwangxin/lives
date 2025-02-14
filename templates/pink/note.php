@@ -18,7 +18,10 @@ include_once 'config.php';
                 <img src="<?php echo $config['logo']; ?>" alt="Logo">
             </a>
         </div>
-        <div class="title">忘心留言箱</div>
+        <div class="title"><span style="color: #b17e94; font-size: 15px; position: relative; top: -13px; float: left;">
+                        这里的每个故事都是一朵花 
+                    </span>
+        </div>
     </div>
 
     <div class="main-content">
