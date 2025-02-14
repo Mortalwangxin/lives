@@ -1,1 +1,0 @@
-(function hitokoto(){var hitokoto="如果没有见过光明，我本可以忍受黑暗";var dom=document.querySelector('#hitokoto');Array.isArray(dom)?dom[0].innerText=hitokoto:dom.innerText=hitokoto;})()
