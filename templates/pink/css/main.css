@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.logo img {
+    width: 70px; /* 调整Logo大小 */
+    height: auto;
+    border-radius: 80%;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #b17e94;
+    margin: 0 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 95%; /* 调整宽度 */
+    max-width: 800px; /* 调整最大宽度 */
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea.form-input {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #b17e94;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px 0;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+}
+
+.settings-btn {
+    background-color: #b17e94;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    background-color: #b17e94;
+}
