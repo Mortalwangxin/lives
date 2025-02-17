@@ -103,6 +103,6 @@ $config = get_all_config();
 // 获取留言数量
 $message_count = $connect->query("SELECT COUNT(*) FROM fanall")->fetch_row()[0];
 
-$currentVersion = '2.0.1';
+$currentVersion = '2.0.2';
 
 ini_set('display_errors', 0); 
